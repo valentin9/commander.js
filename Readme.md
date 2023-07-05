@@ -1027,10 +1027,14 @@ See [commander-js/extra-typings](https://github.com/commander-js/extra-typings) 
 import { Command } from '@commander-js/extra-typings';
 ```
 
-ts-node: If you use `ts-node` and  stand-alone executable subcommands written as `.ts` files, you need to call your program through node to get the subcommands called correctly. e.g.
+TypeScript execution engines (`ts-node`, `tsx` and others)
+If you use a TypeScript execution engine to run stand-alone executable subcommands written as `.ts` files, you need to call your program through node to get the subcommands called correctly. e.g.
 
 ```sh
+# node-ts
 node -r ts-node/register pm.ts
+# tsx
+node --loader tsx pm.ts
 ```
 
 ### createCommand()
